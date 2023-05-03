@@ -48,11 +48,45 @@ if (clima== 'lluvioso'){
   console.log('Mirá el cielo :)')
 } */
 
-let anioActual = 2023;
+/* let anioActual = 2023;
 let anioNacimiento = prompt("En que año naciste?");
 let cantidaDeCopas = parseInt((anioActual - anioNacimiento) / 4);
 
 alert("Has vivido " + cantidaDeCopas + " mundiales en tu vida");
+ */
+
+/* let numero = Number(prompt("pone un numero menor a 5"));
+let suma = 0
+
+for (i=0 ; i<= 5 ; i++){
+suma = suma + numero;
+console.log(suma);
+} */
+/* const saludo = 'Hola Coders!';
+let cantidadSaludos = Number(prompt("Ingrese cantidad"));
+let contador = 1;
+
+while (contador <= cantidadSaludos) {
+  console.log(saludo);
+  contador++;
+} */
+
+let numA;
+let numB;
+let operador;
+let resultado = 0;
+
+function operacion (numA,numB){
+  numA = Number(prompt('primer numero de la operación'))
+  operador = prompt('que operacíon querés realizar?')
+  numB = Number(prompt('segundo numero de la operación'))
+  return operacion;
+}
+
+
+
+
+
 
 /* ("use strict"); // Paul Slaymaker, paul25882@gmail.com
 const body = document.getElementsByTagName("body").item(0);

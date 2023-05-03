@@ -1,0 +1,20 @@
+const nombresOrdenados = nombre.slice(); con esto hacemos copias de arrays para que los distintos
+metodos no rompan el orden.
+Slice hace una copia
+para que no se rompa el orden del arreglo para siempre
+
+const nombresOrdenados = [...nombre];   operador spred operator, son los ... puntos
+
+como usar sort con numeros:
+const puntos = [40,100,1,5,25,10];
+puntos.sort();
+console.log(puntos); aca los ordena de manera distinta (1,10,100,25,40,5)
+si queremos usar numeros
+
+con funcion anonima
+pntos.sort(function(a,b){
+return a-b;
+{);
+
+de mayor a menor seria b-a
+
