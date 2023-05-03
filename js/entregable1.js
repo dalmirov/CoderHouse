@@ -18,21 +18,29 @@ switch (true) {
 
 let nombre, escuela, materiales;
 
+function IngresarDatos() {
+  do {
+    nombre = prompt(
+      saludo + "\n¿Cómo es tu nombre?\nVoy a ayudarte en tu compra :)"
+    );
+  } while (nombre === "" || nombre === null);
+
+  do {
+    escuela = prompt(nombre + ", ¿a qué escuela o impulso pertenecés?");
+  } while (escuela === "" || escuela === null);
+
+  materiales = prompt(
+    "Empecemos por el primer material que necesitas:\nPueden ser: Acuarelas, Crayones o Ceras para Modelar?"
+  );
+}
+
 function mensajeError() {
   if (nombre === undefined || escuela === undefined) {
     alert(":-( Error, es necesario agregar todos los datos.");
     console.error(":-( Error, es necesario agregar todos los datos.");
+    return true;
   }
-}
-
-function IngresarDatos() {
-  nombre = prompt(
-    saludo + "\n¿Cómo es tu nombre?\nVoy a ayudarte en tu compra :)"
-  );
-  escuela = prompt(nombre + ", ¿a qué escuela o impulso pertenecés?");
-  materiales = prompt(
-    "Empecemos por el primer material que necesitas:\nPueden ser: Acuarelas, Crayones o Ceras para Modelar?"
-  );
+  return false;
 }
 
 function definirMaterial() {
@@ -48,10 +56,13 @@ function definirMaterial() {
       break;
     default:
       alert(
-        "Todavía no tenemos esos materiales, por favor elegí entre las posibilidades que tenemos:\nAcuarelas, Crayones o Ceras para Modelar"
+        "Por favor elegí entre las posibilidades que tenemos:\nAcuarelas, Crayones o Ceras para Modelar"
       );
   }
 }
-mensajeError();
+
 IngresarDatos();
+while (mensajeError()) {
+  IngresarDatos();
+}
 definirMaterial();
